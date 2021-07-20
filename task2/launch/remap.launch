@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node" />
+    <node pkg="turtlesim" type="turtle_teleop_key" name="turtle2_teleop_key" launch-prefix="gnome-terminal -x">
+        <remap from="turtle1/cmd_vel" to="turtle2/cmd_vel" />
+    </node>
+    <node pkg="task2" type="add_turtle" name="add_turtle" />
+
+</launch>

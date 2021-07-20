@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  tf
+  nav_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -208,6 +210,13 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(turtle_forma src/turtle_forma.cpp)
 target_link_libraries(turtle_forma ${catkin_LIBRARIES})
+add_executable(publish_odome src/publish_odome.cpp)
+target_link_libraries(publish_odome ${catkin_LIBRARIES})
+add_executable(add_turtle src/add_turtle.cpp)
+target_link_libraries(add_turtle ${catkin_LIBRARIES})
+
+
+
 
 
 
