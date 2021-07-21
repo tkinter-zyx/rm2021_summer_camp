@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find task4)/launch/continuous_detection.launch" />
+    <include file="$(find task4)/launch/usb_cam-test.launch" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find task4)/config/apriltag.rviz" required="true" />
+</launch>

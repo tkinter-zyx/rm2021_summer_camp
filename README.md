@@ -1,7 +1,8 @@
-# Robomaster 2021 Task2 使用说明
+# Robomaster 2021 Task 使用说明
 ***
 _姓名：张宇轩  组别：5组  方向：算法_
-## 三龟列阵
+
+## Task 2.1
 
 开发耗时：约9h
 
@@ -15,7 +16,7 @@ _姓名：张宇轩  组别：5组  方向：算法_
     rosrun tourtlesim tourtlesim_node
     rosrun task2 turtle_forma
 
-## 再来一龟
+## Task 2.2
 
 使用方法：下载功能包并进入工作空间文件夹下输入以下命令
 
@@ -25,6 +26,17 @@ _姓名：张宇轩  组别：5组  方向：算法_
 
 实际效果：turtle2出现在画布左下角，终端新开一标签页可用于控制turtle2
 
-## 里程发送
+## Task4
 
-由于今天做三龟列阵过于投入，不知不觉竟已经将近凌晨四点，于是我遗憾地打算先睡为妙
+使用方法：下载功能包并编译后进入工作空间文件夹下输入以下命令
+
+    roslaunch task4 start.launch 
+
+实际效果：出现在摄像头视野内的二维码可被识别，二维码自身坐标系显示在rviz可视化界面上
+
+错误解决：若出现以下报错信息
+
+    [ERROR] [1626876251.212798002]: VIDIOC_S_FMT error 22, Invalid argument
+    [usb_cam-3] process has died [pid 65032, exit code 1
+
+请打开`task4/launch/usb_cam-test.launch`文件，将第3行`value`的值改为当前系统下的设备名称
