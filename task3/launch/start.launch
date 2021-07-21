@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="task3" name="odome_pub" type="odome_pub.py" output="screen" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find task3)/launch/odom.rviz" required="true" />
+</launch>
