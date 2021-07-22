@@ -29,11 +29,6 @@ def detectAndDisplay(frame):
             frame = cv.circle(frame, eye_center, radius, (255, 0, 0 ), 4)
     cv.imshow('Capture - Face detection', frame)
 
-# while True:
-#     detectAndDisplay(frame)
-#     if cv.waitKey(10) == 27:
-#         break
-
 def imageCallback(img):
     bridge = CvBridge()
     img = bridge.imgmsg_to_cv2(img, "bgr8")
@@ -46,5 +41,5 @@ def start():
     rospy.Subscriber("/usb_cam/image_raw", Image, imageCallback)
     rospy.spin()
 
-# if __name__ == '__main__':
-start()
+if __name__ == '__main__':
+    start()
